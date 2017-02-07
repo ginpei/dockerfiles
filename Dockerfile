@@ -1,6 +1,6 @@
 FROM ubuntu
 RUN apt update && apt upgrade -y
-RUN apt install -y vim curl git
+RUN apt install -y vim curl git tmux
 
 # Node.js
 # use nvm instead of apt which provide only v0.10.25
