@@ -10,6 +10,7 @@ RUN apt install -y vim curl git tmux
 ENV NODE_VERSION v6.9.5
 ENV NVM_DIR /usr/local/nvm
 RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
+RUN bash -c "source $NVM_DIR/nvm.sh && nvm install $NODE_VERSION"
 
 # Prepare ruby
 # use rvm instead of apt which provides `ruby` of v1 or `ruby2.0`
@@ -20,5 +21,5 @@ RUN echo "source /usr/local/rvm/scripts/rvm" >> ~/.bashrc
 # Packages
 RUN bash -c "source /usr/local/rvm/scripts/rvm \
 	&& gem install sass"
-RUN bash -c "source $NVM_DIR/nvm.sh && nvm install $NODE_VERSION \
+RUN bash -c "source $NVM_DIR/nvm.sh && nvm use $NODE_VERSION \
 	&& npm install -g concurrently grunt-cli browserify watchify"
