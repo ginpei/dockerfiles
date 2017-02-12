@@ -2,6 +2,7 @@ FROM ubuntu
 
 # Apt
 RUN apt update && apt upgrade -y
+RUN apt install -y bzip2 gawk g++ gcc make libc6-dev libreadline6-dev zlib1g-dev libssl-dev libyaml-dev libsqlite3-dev sqlite3 autoconf libgmp-dev libgdbm-dev libncurses5-dev automake libtool bison pkg-config libffi-dev
 RUN apt install -y vim curl git tmux
 
 # Node.js
