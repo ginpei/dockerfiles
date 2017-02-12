@@ -1,4 +1,6 @@
 FROM ubuntu
+
+# Apt
 RUN apt update && apt upgrade -y
 RUN apt install -y vim curl git tmux
 
