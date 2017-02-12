@@ -8,7 +8,7 @@ ENV NODE_VERSION v6.9.5
 ENV NVM_DIR /usr/local/nvm
 RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
 RUN bash -c "source $NVM_DIR/nvm.sh && nvm install $NODE_VERSION \
-	&& npm install -g concurrently grunt-cli"
+	&& npm install -g concurrently grunt-cli browserify watchify"
 
 # Prepare ruby
 # use rvm instead of apt which provides `ruby` of v1 or `ruby2.0`
