@@ -12,6 +12,7 @@ RUN bash -c "source $NVM_DIR/nvm.sh && nvm install $NODE_VERSION \
 
 # Prepare ruby
 # use rvm instead of apt which provides `ruby` of v1 or `ruby2.0`
-RUN curl -sSL https://get.rvm.io | bash -s stable --rails
+ENV RUBY_VERSION 2.3.3
+RUN curl -sSL https://get.rvm.io | bash -s stable --ruby=$RUBY_VERSION --gems=rails
 RUN echo "source /usr/local/rvm/scripts/rvm" >> ~/.bashrc
 
