@@ -15,4 +15,5 @@ RUN bash -c "source $NVM_DIR/nvm.sh && nvm install $NODE_VERSION \
 ENV RUBY_VERSION 2.3.3
 RUN curl -sSL https://get.rvm.io | bash -s stable --ruby=$RUBY_VERSION --gems=rails
 RUN echo "source /usr/local/rvm/scripts/rvm" >> ~/.bashrc
-
+RUN bash -c "source /usr/local/rvm/scripts/rvm \
+	&& gem install sass"
