@@ -7,6 +7,15 @@ services:
       - 80:80
     volumes_from:
       - app
+    depends_on:
+      - php
+
+  php:
+    image: php:7.0-fpm
+    expose:
+      - 9000
+    volumes_from:
+      - app
 
   app:
     image: nginx:latest
