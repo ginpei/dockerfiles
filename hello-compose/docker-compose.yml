@@ -22,7 +22,7 @@ services:
   app:
     image: nginx:latest
     volumes:
-      - ./www/html:/var/www/html
+      - ./wordpress:/var/www/html
     command: "true"
 
 
