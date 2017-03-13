@@ -1,0 +1,16 @@
+version: "2.1"
+
+services:
+  nginx:
+    build: ./nginx
+    ports:
+      - 80:80
+    volumes_from:
+      - app
+
+  app:
+    image: nginx:latest
+    volumes:
+      - ./www/html:/var/www/html
+    command: "true"
+
