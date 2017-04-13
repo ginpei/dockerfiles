@@ -3,5 +3,44 @@ version: "2.1"
 services:
   composer:
     build: ./composer
+    command: composer install
     volumes:
       - .:/app
+
+  nginx:
+    build: ./nginx
+    ports:
+      - 80:80
+    volumes_from:
+      - wp
+    depends_on:
+      - php
+
+  php:
+    build: ./php
+    expose:
+      - 9000
+    links:
+      - mysql
+    volumes_from:
+      - wp
+
+  wp:
+    image: nginx:latest
+    volumes:
+      - ./wp:/var/www/html
+    command: "true"
+
+
+  mysql:
+    image: mysql:latest
+    volumes:
+      - data:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: "${MYSQL_DATABASE}"
+      MYSQL_PASSWORD: "${MYSQL_PASSWORD}"
+      MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD}"
+      MYSQL_USER: "${MYSQL_USER}"
+
+volumes:
+  data:
