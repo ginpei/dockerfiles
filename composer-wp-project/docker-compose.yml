@@ -37,7 +37,7 @@ services:
 
   composer:
     build: ./composer
-    command: composer install
+    command: bash -c "composer install && cp ./wp-config.php wp/"
     volumes:
       - .:/app
 
