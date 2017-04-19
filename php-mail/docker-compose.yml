@@ -1,0 +1,24 @@
+version: "2.1"
+
+services:
+  www:
+    build: ./dockerfiles/nginx
+    ports:
+      - 80:80
+    volumes_from:
+      - app
+    depends_on:
+      - php
+
+  php:
+    build: ./dockerfiles/php
+    expose:
+      - 9000
+    volumes_from:
+      - app
+
+  app:
+    build: ./dockerfiles/nginx
+    volumes:
+      - ./public:/var/www/html
+    command: "true"
