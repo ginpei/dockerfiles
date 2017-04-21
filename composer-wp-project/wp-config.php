@@ -32,7 +32,7 @@ define('DB_PASSWORD', 'mypassword');
 define('DB_HOST', 'db');
 
 /** Database Charset to use in creating database tables. */
-define('DB_CHARSET', 'utf8mb4');
+define('DB_CHARSET', 'utf8');
 
 /** The Database Collate type. Don't change this if in doubt. */
 define('DB_COLLATE', '');
@@ -46,14 +46,14 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         'ens%wOx8tc<ii&S{39lzM4oc+DW%d;`yRO`BY:~*Cl~Kw|t?D~/C.+V!JGY11~RY');
-define('SECURE_AUTH_KEY',  '3rw,*d-Sjzo8G437g{:!aM{i(bt9bk{w(9CVJ<Jci21zZQ917Mw*KmMhF^sb!9U#');
-define('LOGGED_IN_KEY',    '^%rC%=_F0g9suD)tp1Vofi@9vF.r1v0#Rh|245hwKJCy2MTQbOc_O+cLc~@^sQ`y');
-define('NONCE_KEY',        'glpvJhk(x9%AFLv<9c=N>HtvWt*oW 8KN]g4%hAOt-GiE,)x5A1D_P&djJCbRX%6');
-define('AUTH_SALT',        '.%$!72L&lH|1K[q!Ms%6$><oH};SNHqZ7}O8TL15=S6HO]sWRbYSL9wXav8BinOK');
-define('SECURE_AUTH_SALT', '9RCSSm,?rb++@*%$zo*Z*U8r;jirI=M)sU]*jF(VdpXOFll.0O[#<k 8]g,L=[+2');
-define('LOGGED_IN_SALT',   '}XdRp]Z@FG9ea%+d`q~8-U$u;YH`!iT]LuKhAN-[&g Fx|LFDu{PA,*,-$s<MK6y');
-define('NONCE_SALT',       'n;WgzkVHEI:=4%*| U+#YjS#?[]s7:O+tF 03~VPnh#:aw}5 *+z20?wTq,goTh,');
+define('AUTH_KEY',         'put your unique phrase here');
+define('SECURE_AUTH_KEY',  'put your unique phrase here');
+define('LOGGED_IN_KEY',    'put your unique phrase here');
+define('NONCE_KEY',        'put your unique phrase here');
+define('AUTH_SALT',        'put your unique phrase here');
+define('SECURE_AUTH_SALT', 'put your unique phrase here');
+define('LOGGED_IN_SALT',   'put your unique phrase here');
+define('NONCE_SALT',       'put your unique phrase here');
 
 /**#@-*/
 
