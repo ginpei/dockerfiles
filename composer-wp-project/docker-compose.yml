@@ -30,7 +30,7 @@ services:
       MYSQL_USER: "${MYSQL_USER}"
 
   wp:
-    image: nginx:latest
+    build: ./nginx
     volumes:
       - ./wp:/var/www/html
     command: "true"
