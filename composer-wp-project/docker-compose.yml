@@ -16,11 +16,11 @@ services:
     expose:
       - 9000
     links:
-      - mysql
+      - db
     volumes_from:
       - wp
 
-  mysql:
+  db:
     image: mysql:latest
     volumes:
       - ./db:/var/lib/mysql
