@@ -23,7 +23,7 @@ services:
   mysql:
     image: mysql:latest
     volumes:
-      - data:/var/lib/mysql
+      - ./db:/var/lib/mysql
     environment:
       MYSQL_DATABASE: "${MYSQL_DATABASE}"
       MYSQL_PASSWORD: "${MYSQL_PASSWORD}"
@@ -41,6 +41,3 @@ services:
     command: bash -c "composer install && cp ./wp-config.php wp/"
     volumes:
       - .:/app
-
-volumes:
-  data:

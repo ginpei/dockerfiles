@@ -9,13 +9,14 @@ Then wait a while and open `http://localhost/`.
 
 The first line will create followings:
 
+- `db/`
 - `vender/`
 - `wp/`
 
 # Delete Everithing
 
 ```bash
-$ rm -rf vendor/ wp/; docker rm `docker ps -aq`; docker volume prune
+$ rm -rf db/ vendor/ wp/; docker rm `docker ps -aq`
 ```
 
 Except for images. If you need, run `docker-composer build` additinally.
