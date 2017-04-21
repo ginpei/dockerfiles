@@ -2,9 +2,12 @@
 
 ```bash
 $ docker-compose run composer composer install
+$ docker-compose up
 ```
 
-It will create followings:
+Then wait a while and open `http://localhost/`.
+
+The first line will create followings:
 
 - `vender/`
 - `wp/`
