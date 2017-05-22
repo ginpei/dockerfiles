@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+
+  rails:
+    build: .
+    command: "echo \"--------------------------------\nusage: docker-compose run rails rails new --skip-bundle my-project\n--------------------------------\""
+    volumes:
+      - ./projects:/work
